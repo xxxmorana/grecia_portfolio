@@ -104,11 +104,12 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="typography-hero mb-6 text-gradient">
             My Projects
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of my latest work showcasing modern web development and design
+          <p className="typography-body-large text-muted-foreground max-w-3xl mx-auto">
+            A collection of my latest work showcasing modern web development, innovative design,
+            and cutting-edge technologies that bring ideas to life.
           </p>
         </motion.div>
 
@@ -165,25 +166,25 @@ const Projects = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <div>
-                      <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="typography-h3 text-foreground mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="typography-body text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
 
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-white/10 text-foreground text-xs rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-white/10 text-foreground typography-small rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
 
                     <div className="flex gap-3 pt-4">
                       {project.liveUrl && (
@@ -220,11 +221,12 @@ const Projects = () => {
           className="text-center mt-20"
         >
           <GlassCard className="max-w-2xl mx-auto">
-            <h3 className="font-display text-2xl font-bold mb-4 text-gradient">
+            <h3 className="typography-h2 mb-4 text-gradient">
               Like What You See?
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Let's work together to bring your ideas to life with beautiful, functional design.
+            <p className="typography-body text-muted-foreground mb-6">
+              Let's work together to bring your ideas to life with beautiful, functional design
+              and cutting-edge development that exceeds expectations.
             </p>
             <GlassButton variant="primary" size="lg">
               Start a Project

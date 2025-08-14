@@ -119,11 +119,12 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="typography-hero mb-6 text-gradient">
             Get In Touch
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your next project? Let's create something amazing together.
+          <p className="typography-body-large text-muted-foreground max-w-3xl mx-auto">
+            Ready to start your next project? Let's create something amazing together that
+            exceeds your expectations and brings your vision to life.
           </p>
         </motion.div>
 

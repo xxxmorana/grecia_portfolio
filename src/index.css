@@ -80,6 +80,43 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  /* Typography matching reference design */
+  .typography-hero {
+    @apply font-display text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight;
+  }
+  
+  .typography-h1 {
+    @apply font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight;
+  }
+  
+  .typography-h2 {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight;
+  }
+  
+  .typography-h3 {
+    @apply font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-snug tracking-tight;
+  }
+  
+  .typography-h4 {
+    @apply font-sans text-lg md:text-xl lg:text-2xl font-semibold leading-snug;
+  }
+  
+  .typography-body-large {
+    @apply font-body text-lg md:text-xl leading-relaxed;
+  }
+  
+  .typography-body {
+    @apply font-body text-base leading-relaxed;
+  }
+  
+  .typography-small {
+    @apply font-body text-sm leading-normal;
+  }
+  
+  .typography-caption {
+    @apply font-sans text-xs font-medium uppercase tracking-widest;
+  }
+
   /* Glassmorphism Effects */
   .glass {
     background: var(--glass-bg);
@@ -131,6 +168,45 @@ All colors MUST be HSL.
     box-shadow: 0 0 0 2px hsl(var(--accent) / 0.2);
   }
   
+  /* Photo Layout Components - Matching reference design */
+  .photo-frame-primary {
+    @apply relative overflow-hidden rounded-2xl;
+    background: var(--gradient-glass);
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .photo-frame-secondary {
+    @apply relative overflow-hidden rounded-lg;
+    background: var(--gradient-glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .photo-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent;
+  }
+  
+  .photo-grid-staggered {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4;
+  }
+  
+  .photo-grid-staggered > *:nth-child(2n) {
+    @apply mt-8;
+  }
+  
+  .photo-grid-staggered > *:nth-child(3n) {
+    @apply mt-16;
+  }
+  
+  .photo-collage {
+    @apply relative;
+  }
+  
+  .photo-collage-item {
+    @apply absolute transform transition-all duration-300 hover:scale-105 hover:z-10;
+  }
+  
   /* Animation utilities */
   .animate-float {
     animation: float 6s ease-in-out infinite;
@@ -146,6 +222,10 @@ All colors MUST be HSL.
   
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out;
+  }
+  
+  .animate-tilt {
+    animation: tilt 8s ease-in-out infinite;
   }
 }
 
@@ -213,5 +293,17 @@ All colors MUST be HSL.
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes tilt {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1);
+  }
+  25% { 
+    transform: rotate(-2deg) scale(1.02);
+  }
+  75% { 
+    transform: rotate(2deg) scale(0.98);
   }
 }
